@@ -8,17 +8,15 @@ from lxml import etree
 import xml.etree.ElementTree as ET
 import urllib2
 import os,time
-#from _smbc import Context
 import datetime,parser
 
 class temperature(models.Model):
-    _name= 'temperature' 
-  
+    _name= 'temperature'
+    
     ip=fields.Char(string="Ip",required=True)
     time_intervale=fields.Integer(string="Time intervale")
-    data=fields.One2many('temperatures','datas')  
+    data=fields.One2many('temperatures','datas')
     
-        
     def get_temperature(self, cr, uid, context=None):
         temp_obj = self.pool.get('temperatures')
         print  "contextcontext",context
@@ -53,7 +51,6 @@ class temperature(models.Model):
                 temp_obj.create(cr,uid,vals_temp,context=context)                
            
 
-
 class temperatures(models.Model):
     _name= 'temperatures'
     def set_datato_dt_time(self):
@@ -74,8 +71,4 @@ class temperatures(models.Model):
     datas=fields.Many2one('temperature',readonly=True)  
     datos = fields.Datetime('Date', required=True,readonly=True)
     fill_data = fields.Float(compute=set_datato_dt_time,string="Child Service")
-    dt_time = fields.Char('Date & Time') 
-
-   
-
-
+    dt_time = fields.Char('Date & Time')
