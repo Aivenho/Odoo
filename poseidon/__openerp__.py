@@ -24,7 +24,7 @@
     'version': '8.0.0.0.0',
     'description': 'Temperature Import Module',
     'license': 'AGPL-3',
-    'category': 'Tools',
+    'category': 'Specific Industry Applications',
     'author': 'Aivenhoo, Faycal',
         'description': """
 Poseidon 2250 (HW group) data import
