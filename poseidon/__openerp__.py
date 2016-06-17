@@ -26,7 +26,7 @@
     'description': 'Temperature Import Module',
     'license': 'AGPL-3',
     'category': 'Specific Industry Applications',
-    'author': 'Aivenhoo, Faycal',
+    'author': 'Aivenho, Faycal',
         'description': """
 Poseidon 2250 (HW group) data import
 =================
