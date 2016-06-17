@@ -57,9 +57,9 @@ class temperatures(models.Model):
 		res = {}
 		res = {}.fromkeys(self.ids, '')
 		for obj in self:
-			date_time = datetime.datetime.strptime(obj.datos, "%Y-%m-%d %H:%M:%S")
+			date_time = datetime.datetime.strptime(obj.datos, "%Y-%m-%d %H:%M")
 			dt_time = date_time + datetime.timedelta(minutes = 0, hours = 0)
-			obj.write({'dt_time':str(dt_time).replace('-','/')})
+			obj.write({'dt_time':str(dt_time).replace('-','.')})
 			res[obj.id] = 1.0
 		return res
     id_temp=fields.Integer(string="Sensor ID")
