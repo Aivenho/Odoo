@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-	<record forcecreate="True" id="ir_cron_termo_scheduler" model="ir.cron">
-            <field name="name">Temp Readout</field>
+	<record forcecreate="True" id="ir_cron_scheduler_demo_action" model="ir.cron">
+            <field name="name">Demo scheduler</field>
             <field eval="True" name="active" />
             <field name="user_id" ref="base.user_root" />
-            <field name="interval_number">10</field>
+            <field name="interval_number">1</field>
             <field name="interval_type">minutes</field>
             <field name="numbercall">-1</field>
             <field eval="False" name="doall" />
@@ -18,16 +18,15 @@
             <field name="model">temperatures</field>
             <field name="arch" type="xml">
                 <tree  string="Temperatures">
-			<field name="id_temp"/>   
-			<field name="name"/>  
-			<field name="units"/> 
-			<field name="value"/>   
-			<field name="min"/>  
-			<field name="max"/>
-			<field name="datos"/>
-			<field name="fill_data" invisible="1"/>
-			<field name="dt_time" invisible="1"/> 	    
-		</tree>
+                    <field name="id_temp"/>
+                    <field name="name"/>
+                    <field name="units"/>
+                    <field name="value"/>
+                    <field name="min"/>
+                    <field name="max"/>
+                    <field name="dt_time"/>
+                    <field name="datos" invisible="1"/>
+                </tree>
             </field>
         </record>
 
@@ -37,37 +36,38 @@
             <field name="arch" type="xml">
                 <form string="Temperatures" >
                     <sheet>
-			<group col="4">
-				<field name="id_temp"/>   
-				<field name="name"/>  
-				<field name="units"/> 
-				<field name="value"/>   
-				<field name="min"/>  
-				<field name="max"/> 
-				<field name="datos"/> 
-				<field name="fill_data" invisible="1"/>
-				<field name="dt_time" invisible="1"/>
-			</group>
+                        <group col="4">
+                            <field name="id_temp"/>
+                            <field name="name"/>
+                            <field name="units"/>
+                            <field name="value"/>
+                            <field name="min"/>
+                            <field name="max"/>
+                            <field name="dt_time"/>
+                            <field name="datos" invisible="1"/>
+                        </group>
                     </sheet>
                 </form>
             </field>
-        </record>  
+        </record>
         
          <record id="action_temperatures" model="ir.actions.act_window">
-		<field name="name">Temperatures</field>
-		<field name="type">ir.actions.act_window</field>
-		<field name="res_model">temperatures</field>
-		<field name="view_type">form</field>
-		<field name="view_mode">tree,form,graph</field>
+            <field name="name">temperatures</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">temperatures</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,graph</field>
         </record>
         
         <record model="ir.ui.view" id="temperatures_graph_view">
-		<field name="name">temperature.graph</field>
-		<field name="model">temperatures</field>
-		<field name="arch" type="xml">
-		<graph string="Temperatures">
-			<field name="dt_time"/>
-			<field name="value" type="measure"/>
+            <field name="name">temperature.graph</field>
+            <field name="model">temperatures</field>
+            <field name="arch" type="xml">
+                <graph string="Temperatures">
+                    <field name="dt_time"/>
+                    <field name="min" type="measure"/>
+                    <field name="max" type="measure"/>
+                    <field name="value" type="measure"/>
                 </graph>
             </field>
         </record>
@@ -86,38 +86,38 @@
  <record id="temperature_form_view" model="ir.ui.view">
             <field name="name">temperature.form</field>
             <field name="model">temperature</field>
-               <field name="arch" type="xml">
+            <field name="arch" type="xml">
                 <form string="Temperature" >
                     <sheet>
-			<group col="4">
-				<field name="ip"/> 
-			</group> 
-				<field name="data">
-				    <tree context="{'datas': active_id}" colors="red:value &lt; min;red:value &gt; max;green:value &gt; min;green:value &lt; max"> 
-					<field name="id_temp"/>   
-					<field name="name"/>  
-					<field name="units"/> 
-					<field name="value"/>   
-					<field name="min"/>  
-					<field name="max"/> 
-					<field name="datos"/> 
-					<field name="fill_data" invisible="1"/>
-					<field name="dt_time" invisible="1"/> 
-				    </tree>
-				</field>               
+                        <group col="4">
+                            <field name="ip"/>
+                        </group>
+                        <field name="data">
+                            <tree context="{'datas': active_id}" colors="red:value &lt; min;red:value &gt; max;green:value &gt; min;green:value &lt; max">
+                                <field name="id_temp"/>
+                                <field name="name"/>
+                                <field name="units"/>
+                                <field name="value"/>
+                                <field name="min"/>
+                                <field name="max"/>
+                                <field name="dt_time"/>
+                                <field name="datos" invisible="1"/>
+                                <!--<field name="fill_data" invisible="1"/>-->
+                           </tree>
+                        </field>
                     </sheet>
                 </form>
-               </field>
+            </field>
         </record>
         
        <record id="action_temperature" model="ir.actions.act_window">
-            <field name="name">Temperature</field>
+            <field name="name">temperature</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">temperature</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
-
+        
 <menuitem name="Reporting/Warehouse" id="menu_client" action="action_temperature"/>
 <menuitem name="Temperature Sensors" id="temperature" parent="menu_client" action="action_temperature"/>
 <menuitem name="Data Review" id="temperatures" parent="menu_client" action="action_temperatures"/>
