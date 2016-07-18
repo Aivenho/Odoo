@@ -118,8 +118,8 @@
             <field name="view_mode">tree,form</field>
         </record>
 
-<menuitem name="Reporting/Temperature" id="menu_client" action="action_temperature"/>
-<menuitem name="Configuraton" id="temperature" parent="menu_client" action="action_temperature"/>
+<menuitem name="Reporting/Warehouse" id="menu_client" action="action_temperature"/>
+<menuitem name="Temperature Sensors" id="temperature" parent="menu_client" action="action_temperature"/>
 <menuitem name="Data Review" id="temperatures" parent="menu_client" action="action_temperatures"/>
 
     </data>
