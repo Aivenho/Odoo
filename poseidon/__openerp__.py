@@ -39,6 +39,8 @@ documentation in to Odoo database.
             'temperature.xml',
             "security/temperature_user.xml",
             "security/ir.model.access.csv",
+            "data.xml",
              ],
+    'qweb': ["static/src/xml/temperature.xml"],
     'application': 'True'
 }
