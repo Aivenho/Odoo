@@ -1,4 +1,4 @@
-openerp.uniit3 = function (instance) {
+openerp.poseidon = function (instance) {
 
     var QWeb = instance.web.qweb;
     var _t = instance.web._t;
@@ -29,42 +29,42 @@ openerp.uniit3 = function (instance) {
                     switch(temps[i]['name']){
                         case 'Room A/B -T':
                             temp_notifab = temp_notifab.concat('A/B: ',temps[i]['value'],'oC | ')
-                            document.getElementById("test1").innerHTML = temp_notifab;
+                            document.getElementById("room1").innerHTML = temp_notifab;
                             if (temps[i]['value']<temps[i]['min'] || temps[i]['value']>temps[i]['max'] ){
-                                    document.getElementById("test1").style.color = "red";
+                                    document.getElementById("room1").style.color = "red";
                             }
                             else{
-                                document.getElementById("test1").style.color = "green";
+                                document.getElementById("room1").style.color = "green";
                             }
                             break;
                         case 'Room C -T':
                             temp_notifc = temp_notifc.concat('C: ',temps[i]['value'],'oC | ')
-                            document.getElementById("test2").innerHTML = temp_notifc;
+                            document.getElementById("room2").innerHTML = temp_notifc;
                             if (temps[i]['value']<temps[i]['min'] || temps[i]['value']>temps[i]['max'] ){
-                                    document.getElementById("test2").style.color = "red";
+                                    document.getElementById("room").style.color = "red";
                             }
                             else{
-                                document.getElementById("test2").style.color = "green";
+                                document.getElementById("room2").style.color = "green";
                             }
                             break;
                         case 'Freezer D -T':
                             temp_notifd = temp_notifd.concat('D: ',temps[i]['value'],'oC | ')
-                            document.getElementById("test3").innerHTML = temp_notifd;
+                            document.getElementById("room3").innerHTML = temp_notifd;
                             if (temps[i]['value']<temps[i]['min'] || temps[i]['value']>temps[i]['max'] ){
-                                    document.getElementById("test3").style.color = "red";
+                                    document.getElementById("room3").style.color = "red";
                             }
                             else{
-                                document.getElementById("test3").style.color = "green";
+                                document.getElementById("room3").style.color = "green";
                             }
                             break;
                         case 'Cold Room E -T':
                             temp_notifd = temp_notifd.concat('E: ',temps[i]['value'],'oC | ')
-                            document.getElementById("test4").innerHTML = temp_notifd;
+                            document.getElementById("room4").innerHTML = temp_notifd;
                             if (temps[i]['value']<temps[i]['min'] || temps[i]['value']>temps[i]['max'] ){
-                                    document.getElementById("test4").style.color = "red";
+                                    document.getElementById("room4").style.color = "red";
                             }
                             else{
-                                document.getElementById("test4").style.color = "green";
+                                document.getElementById("room4").style.color = "green";
                             }
                             break;
                     }
@@ -74,7 +74,7 @@ openerp.uniit3 = function (instance) {
                 })
 
     }
-    instance.uniit3.place_temperature = instance.web.Widget.extend({
+    instance.poseidon.place_temperature = instance.web.Widget.extend({
         template: 'place_temperature',
         init: function (parent) {
             this._super(parent);
@@ -91,7 +91,7 @@ openerp.uniit3 = function (instance) {
                 if (!_.isUndefined(self.place_temperature)) {
                     return;
                 }
-            self.place_temperature = new instance.uniit3.place_temperature(self);
+            self.place_temperature = new instance.poseidon.place_temperature(self);
             self.place_temperature.appendTo(instance.webclient.$('.oe_systray'));
             });
         },
