@@ -3,7 +3,7 @@
     <data>
         <template id="assets_backend" name="temperature assets" inherit_id="web.assets_backend">
             <xpath expr="." position="inside">
-		<script type="text/javascript" src="/poseidon/static/src/js/temp.js"></script>
+		<script type="text/javascript" src="../static/src/js/temp.js"></script>
             </xpath>
         </template>
     </data>
