@@ -21,7 +21,7 @@
 
 {
     'name': 'Poseidon',
-    'summary': """Remote temperature data import from xml file""",
+    'summary': ""Ttemperature data import from remote xml file""",
     'version': '8.0.0.0.0',
     'description': 'Temperature Import Module',
     'license': 'AGPL-3',
