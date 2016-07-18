@@ -2,12 +2,10 @@
     <t t-name="place_temperature">
         <li class="oe_temperature_status">
             <a href="#">
-                 <strong><span class="oe_topbar_temperature" id="test1"> </span></strong>
+                <strong><span class="oe_topbar_temperature" id="test1"> </span></strong>
                 <strong><span class="oe_topbar_temperature" id="test2"> </span></strong>
                 <strong><span class="oe_topbar_temperature" id="test3"> </span></strong>
                 <strong><span class="oe_topbar_temperature" id="test4"> </span></strong>
-
-
             </a>
         </li>
     </t>
