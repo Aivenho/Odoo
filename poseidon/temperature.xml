@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-	<record forcecreate="True" id="ir_cron_scheduler_demo_action" model="ir.cron">
-            <field name="name">Demo scheduler</field>
+	<record forcecreate="True" id="ir_cron_termo_scheduler" model="ir.cron">
+            <field name="name">Temp Readout</field>
             <field eval="True" name="active" />
             <field name="user_id" ref="base.user_root" />
-            <field name="interval_number">1</field>
+            <field name="interval_number">15</field>
             <field name="interval_type">minutes</field>
             <field name="numbercall">-1</field>
             <field eval="False" name="doall" />
@@ -49,15 +49,17 @@
                     </sheet>
                 </form>
             </field>
-        </record>
+        </record>  
         
-         <record id="action_temperatures" model="ir.actions.act_window">
+        <record id="action_temperatures" model="ir.actions.act_window">
             <field name="name">temperatures</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">temperatures</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form,graph</field>
         </record>
+        
+        
         
         <record model="ir.ui.view" id="temperatures_graph_view">
             <field name="name">temperature.graph</field>
@@ -71,6 +73,8 @@
                 </graph>
             </field>
         </record>
+
+
 
         <record id="temperature_tree_view" model="ir.ui.view">
             <field name="name">temperature.tree</field>
@@ -102,7 +106,6 @@
                                 <field name="max"/>
                                 <field name="dt_time"/>
                                 <field name="datos" invisible="1"/>
-                                <!--<field name="fill_data" invisible="1"/>-->
                            </tree>
                         </field>
                     </sheet>
@@ -117,9 +120,9 @@
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
-        
-<menuitem name="Reporting/Warehouse" id="menu_client" action="action_temperature"/>
-<menuitem name="Temperature Sensors" id="temperature" parent="menu_client" action="action_temperature"/>
+
+<menuitem name="Temperature/Temperature" id="menu_client" action="action_temperature"/>
+<menuitem name="Configuraton" id="temperature" parent="menu_client" action="action_temperature"/>
 <menuitem name="Data Review" id="temperatures" parent="menu_client" action="action_temperatures"/>
 
     </data>
