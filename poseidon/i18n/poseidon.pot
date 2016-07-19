@@ -1,0 +1,57 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* poseidon
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-19 08:27+0000\n"
+"PO-Revision-Date: 2016-07-19 08:27+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: poseidon
+#: model:ir.ui.menu,name:poseidon.temperature
+msgid "Configuraton"
+msgstr ""
+
+#. module: poseidon
+#: model:ir.ui.menu,name:poseidon.temperatures
+msgid "Data Review"
+msgstr ""
+
+#. module: poseidon
+#: model:res.groups,name:poseidon.group_temperature_user
+msgid "Manager"
+msgstr ""
+
+#. module: poseidon
+#: model:ir.module.category,name:poseidon.module_category_administration
+#: model:ir.ui.menu,name:poseidon.menu_client
+#: view:temperature:poseidon.temperature_form_view
+#: view:temperature:poseidon.temperature_tree_view
+msgid "Temperature"
+msgstr ""
+
+#. module: poseidon
+#: view:temperatures:poseidon.temperatures_form_view
+#: view:temperatures:poseidon.temperatures_graph_view
+#: view:temperatures:poseidon.temperatures_tree_view
+msgid "Temperatures"
+msgstr ""
+
+#. module: poseidon
+#: model:ir.actions.act_window,name:poseidon.action_temperature
+msgid "temperature"
+msgstr ""
+
+#. module: poseidon
+#: model:ir.actions.act_window,name:poseidon.action_temperatures
+msgid "temperatures"
+msgstr ""
+
