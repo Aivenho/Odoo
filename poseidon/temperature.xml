@@ -59,8 +59,6 @@
             <field name="view_mode">tree,form,graph</field>
         </record>
         
-        
-        
         <record model="ir.ui.view" id="temperatures_graph_view">
             <field name="name">temperature.graph</field>
             <field name="model">temperatures</field>
@@ -73,9 +71,7 @@
                 </graph>
             </field>
         </record>
-
-
-
+        
         <record id="temperature_tree_view" model="ir.ui.view">
             <field name="name">temperature.tree</field>
             <field name="model">temperature</field>
