@@ -22,12 +22,12 @@
 {
     'name': 'Poseidon',
     'summary': ""Ttemperature data import from remote xml file""",
-    'version': '8.0.0.0.0',
+    'version': '10.0.0.0.0',
     'description': 'Temperature Import Module',
     'license': 'AGPL-3',
     'category': 'Specific Industry Applications',
     'author': 'Aivenho, Faycal',
-        'description': """
+    'description': """
 Poseidon 2250 (HW group) data import
 =================
 Solution to integrate temperature
