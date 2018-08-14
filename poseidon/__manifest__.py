@@ -42,7 +42,7 @@ documentation in to Odoo database.
             "data.xml",
              ],
     'qweb': [
-            "static/src/xml/temp.xml"
+            "qweb/xml/temp.xml"
              ],
     'application': 'True'
 }
