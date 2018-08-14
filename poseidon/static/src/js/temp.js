@@ -1,10 +1,10 @@
-openerp.poseidon = function (instance) {
+iopenerp.poseidon = function (instance) {
 
     var QWeb = instance.web.qweb;
     var _t = instance.web._t;
     var _lt = instance.web._lt;
     var sessions = new openerp.web.Model("temperature");
-    var sessions2 = new openerp.web.Model("temperatures");
+    var sessions2 = new openerp.web.Model("temreadings");
     var counter = 0
     window.refreshDiv = function() {
                 counter = counter + 1;
@@ -86,7 +86,7 @@ openerp.poseidon = function (instance) {
         do_update: function () {
             this._super();
             var self = this;
-            var temperature = new openerp.web.Model('temperatures');
+            var temperature = new openerp.web.Model('tempreadings');
             this.update_promise.done(function () {
                 if (!_.isUndefined(self.place_temperature)) {
                     return;
