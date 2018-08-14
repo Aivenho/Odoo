@@ -1,0 +1,12 @@
+<template>
+    <t t-name="place_temperature">
+        <li class="oe_temperature_status">
+            <a href="#">
+                <strong><span class="oe_topbar_temperature" id="room1"> </span></strong>
+                <strong><span class="oe_topbar_temperature" id="room2"> </span></strong>
+                <strong><span class="oe_topbar_temperature" id="room3"> </span></strong>
+                <strong><span class="oe_topbar_temperature" id="room4"> </span></strong>
+            </a>
+        </li>
+    </t>
+</template>
