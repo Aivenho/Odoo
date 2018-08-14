@@ -34,13 +34,15 @@ Solution to integrate temperature
 documentation in to Odoo database.
 """,
     'depends': [
-                ],
+             ],
     'data': [
             'temperature.xml',
             "security/temperature_user.xml",
             "security/ir.model.access.csv",
             "data.xml",
              ],
-    'qweb': ["static/src/xml/temp.xml"],
+    'qweb': [
+            "static/src/xml/temp.xml"
+             ],
     'application': 'True'
 }
